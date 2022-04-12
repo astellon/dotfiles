@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "nord": "^0.2.1",
+    "sass": "^1.45.0"
+  },
+  "scripts": {
+    "compile": "sass style.scss style.css",
+    "watch": "sass style.scss style.css --watch"
+  }
+}

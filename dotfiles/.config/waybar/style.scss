@@ -1,0 +1,77 @@
+@import "node_modules/nord/src/sass/nord.scss";
+
+* {
+    border: none;
+    border-radius: 20px;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Inter, Noto Sans, 'Font Awesome 5 Free', sans-serif;
+    font-size: 14px;
+    color: $nord4;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+window#waybar.hidden {
+    background-color: transparent;
+}
+
+.modules-center {
+	background-color: $nord0;
+    margin: 5px 0px;
+}
+
+.modules-right {
+	background-color: $nord0;
+    margin: 5px 10px;
+}
+
+.modules-left {
+    margin: 5px 10px;
+	background-color: $nord0;
+}
+
+// center [sway/workspace]
+
+#workspaces button {
+    padding: 5px 10px;
+    background: transparent;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    background: $nord2;
+}
+
+#workspaces button.focused {
+    background-color: $nord10;
+}
+
+#workspaces button.urgent {
+    background-color: $nord11;
+}
+
+// right [idle inhibiter, cpu, memory, ]
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+#mode {
+    background-color: $nord7;
+    border-bottom: 0px solid #ffffff;
+}

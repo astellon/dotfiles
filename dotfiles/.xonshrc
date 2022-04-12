@@ -1,0 +1,24 @@
+# prompt
+execx($(starship init xonsh))
+
+# environ
+$AUTO_SUGGEST = True
+$COMPLETIONS_CONFIRM = True
+$CASE_SENSITIVE_COMPLETIONS = False
+$COMPLETIONS_BRACKETS = True
+$FUZZY_PATH_COMPLETION = True
+$XONSH_AUTOPAIR = True
+$INDENT = '    '
+
+$AUTO_CD = True
+$AUTO_PUSHD
+
+# alias
+aliases['ls'] = 'ls --color=auto'
+aliases['l'] = 'ls -la'
+
+aliases['gt'] = 'git'
+aliases['gti'] = 'git'
+aliases['gs'] = 'git status'
+aliases['ga'] = 'git add .'
+aliases['gd'] = 'git diff'
