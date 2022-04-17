@@ -77,6 +77,6 @@ colors:
     white: '#aeb3bb'
 
 shell:
-  program: /sbin/xonsh
+  program: /usr/bin/zsh
   args:
     - --login  
