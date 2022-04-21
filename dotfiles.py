@@ -4,11 +4,13 @@ from ast import arg
 from yaml import parse
 
 # modules
-from modules.zsh.zsh import DotZsh
+from modules.zsh.zshrc import DotZshrc
+from modules.zsh.zshenv import DotZshenv
 from modules.alacritty.alacritty import DotAlacritty
 
 dots = [
-    DotZsh(),
+    DotZshrc(),
+    DotZshenv(),
     DotAlacritty(),
 ]
 

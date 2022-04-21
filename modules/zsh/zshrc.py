@@ -7,15 +7,15 @@ from py.dotfile import Config, DotFile
 
 
 @dataclass
-class ZshConfig(Config):
+class ZshrcConfig(Config):
     name: str = ".zshrc"
     src: str = os.path.join(os.path.dirname(__file__), ".zshrc")
     dst: str = os.path.join(os.environ["HOME"], ".zshrc")
 
 
-class DotZsh(DotFile):
+class DotZshrc(DotFile):
     def config(self):
-        return ZshConfig()
+        return ZshrcConfig()
 
     def build(self):
         if os.path.exists('~/.zplug'):
@@ -29,7 +29,3 @@ class DotZsh(DotFile):
 
     def update(self):
         Popen(['zsh', '-c', 'source $HOME/.zplug/init.zsh; zplug update']).wait()
-
-
-if __name__ == '__main__':
-    DotZsh().info()
