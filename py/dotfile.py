@@ -26,7 +26,7 @@ class DotFile:
         pass
 
     def apply(self, force=False) -> None:
-        if os.path.exists(self.conf.dst):
+        if os.path.islink(self.conf.dst) or os.path.islink(self.conf.dst):
             logging.warn(f"Configuration already exits at {self.conf.dst}")
 
             if force:
@@ -41,7 +41,8 @@ class DotFile:
                 logging.info(f"Skip apply {self.conf.name}.")
                 return False
 
-        os.symlink(self.conf.src, self.conf.dst)
+        os.symlink(self.conf.src, self.conf.dst,
+                   target_is_directory=os.path.isdir(self.conf.src))
 
         logging.info(f'Finish placing {self.conf.dst}')
 
